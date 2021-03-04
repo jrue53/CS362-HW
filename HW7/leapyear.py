@@ -3,7 +3,10 @@ def ly(year):
     nleapyear = "This is not a leap year"
     if year % 4 == 0:
         if year % 100 == 0:
-            return nleapyear
+            if year % 400 == 0:
+                return leapyear
+            else:
+                return nleapyear
         else:
             return leapyear
     else:
